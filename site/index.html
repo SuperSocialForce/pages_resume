@@ -1,125 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Your Name · Resume</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
+    <title>Resume</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
-      <div>
-        <p class="eyebrow">Resume</p>
-        <h1>Your Name</h1>
-        <p class="tagline">
-          One sentence headline that sums up your craft and impact. Replace this
-          text with your own summary.
-        </p>
-        <ul class="contact">
-          <li><a href="mailto:you@example.com">you@example.com</a></li>
-          <li><a href="https://www.linkedin.com/in/username/">LinkedIn</a></li>
-          <li><a href="https://github.com/username">GitHub</a></li>
-          <li>City, Country</li>
-        </ul>
-      </div>
-      <img src="avatar-placeholder.svg" alt="Profile illustration" />
-    </header>
-
-    <main>
-      <section>
-        <h2>Experience</h2>
-        <article class="card">
-          <header>
-            <div>
-              <h3>Job Title · Company</h3>
-              <p>City · Jan 2022 – Present</p>
-            </div>
-            <span class="badge">Full-time</span>
-          </header>
-          <ul>
-            <li>Lead with measurable impact, e.g., increased conversion by 25%.</li>
-            <li>Describe the work you did, the tools used, and the outcome.</li>
-            <li>Keep bullet points concise and result-focused.</li>
-          </ul>
-        </article>
-        <article class="card">
-          <header>
-            <div>
-              <h3>Previous Role · Company</h3>
-              <p>City · Jun 2020 – Dec 2021</p>
-            </div>
-            <span class="badge">Contract</span>
-          </header>
-          <ul>
-            <li>Outline another key accomplishment with metrics.</li>
-            <li>Highlight collaboration, leadership, or technical depth.</li>
-          </ul>
-        </article>
-      </section>
-
-      <section>
-        <h2>Projects</h2>
-        <article class="card">
-          <header>
-            <div>
-              <h3>Project Name</h3>
-              <p>Short stack description · 2024</p>
-            </div>
-            <a class="badge" href="https://github.com/username/project">Repo</a>
-          </header>
-          <p>
-            Explain what the project does, why you built it, and the impact or
-            users it serves. Link to a live demo if available.
-          </p>
-        </article>
-      </section>
-
-      <section class="grid">
-        <div>
-          <h2>Skills</h2>
-          <ul class="pill-list">
-            <li>Languages</li>
-            <li>Frameworks</li>
-            <li>Systems</li>
-            <li>Tools</li>
-          </ul>
-        </div>
-        <div>
-          <h2>Education</h2>
-          <p class="card">
-            <strong>School Name</strong><br />
-            Degree · Graduation Year
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <h2>Highlights</h2>
-        <div class="timeline">
-          <div>
-            <p class="timeline-date">2025</p>
-            <p>Won an industry award or shipped a high-impact feature.</p>
-          </div>
-          <div>
-            <p class="timeline-date">2024</p>
-            <p>Spoke at a conference or published a notable article.</p>
-          </div>
-        </div>
-      </section>
+    <main class="page">
+      <article id="resume" class="resume" aria-live="polite"></article>
+      <p id="error" class="error" hidden>
+        Could not load <code>resume.md</code>. Check that the file exists in the
+        <code>site/</code> directory.
+      </p>
     </main>
 
-    <footer>
-      <p>© <span id="year"></span> Your Name. Built with vanilla HTML + CSS.</p>
-    </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      const resume = document.getElementById("resume");
+      const error = document.getElementById("error");
+
+      fetch("./resume.md")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Failed to fetch markdown");
+          }
+          return response.text();
+        })
+        .then((markdown) => {
+          marked.setOptions({
+            breaks: true,
+            gfm: true
+          });
+          resume.innerHTML = marked.parse(markdown);
+        })
+        .catch(() => {
+          error.hidden = false;
+        });
     </script>
   </body>
 </html>

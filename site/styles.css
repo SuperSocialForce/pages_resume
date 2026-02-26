@@ -1,0 +1,178 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fefefe;
+  --bg-alt: #f7f7f8;
+  --text: #16181d;
+  --muted: #525866;
+  --accent: #2563eb;
+  --border: #e4e7ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 0 1.5rem 4rem;
+}
+
+main,
+header.hero,
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 0 2rem;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+header.hero img {
+  width: 160px;
+  height: 160px;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin: 0 0 0.3rem;
+}
+
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin: 0;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.tagline {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  color: var(--muted);
+}
+
+.contact a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  margin-top: 2.5rem;
+}
+
+.card {
+  background: var(--bg-alt);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.04);
+}
+
+.card header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.badge {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: #e0edff;
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.pill-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pill-list li {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+}
+
+.timeline {
+  border-left: 3px solid var(--border);
+  padding-left: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.timeline-date {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 0 1rem 3rem;
+  }
+
+  header.hero {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .contact {
+    justify-content: center;
+  }
+}

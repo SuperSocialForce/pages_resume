@@ -8,6 +8,11 @@
   </head>
   <body>
     <main class="page">
+      <nav class="lang-switch" aria-label="Language switcher">
+        <a href="./?lang=ja">日本語</a>
+        <span aria-hidden="true">/</span>
+        <a href="./?lang=en">English</a>
+      </nav>
       <article id="resume" class="resume" aria-live="polite"></article>
       <p id="error" class="error" hidden>
         Could not load <code>resume.md</code>. Check that the file exists in the
@@ -19,8 +24,11 @@
     <script>
       const resume = document.getElementById("resume");
       const error = document.getElementById("error");
+      const params = new URLSearchParams(window.location.search);
+      const lang = params.get("lang") === "en" ? "en" : "ja";
+      const markdownFile = lang === "en" ? "./resume_en.md" : "./resume.md";
 
-      fetch("./resume.md")
+      fetch(markdownFile)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Failed to fetch markdown");

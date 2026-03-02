@@ -1,40 +1,64 @@
-# Your Name
-City, Country  
-[you@example.com](mailto:you@example.com) · [LinkedIn](https://www.linkedin.com/in/username/) · [GitHub](https://github.com/username)
+# 吉村隆之
+千葉県市川市 在住
+[takayuki.yoshimura000@gmail.com](mailto:takayuki.yoshimura000@gmail.com) / [LinkedIn](https://www.linkedin.com/in/takayuki-yoshimura-4a7057184?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJjMUHflLTsmt44AbgT%2BqtQ%3D%3D) / [GitHub](https://github.com/SuperSocialForce)
 
-One sentence summary of your profile and the kind of impact you create.
+## 職務要約
 
-## Experience
+物理と情報の交差領域の課題解決をキャリアとしています。技術者ではあるものの、技術ドリブンではなく課題ドリブンで取り組むことを信条としています。したがって、課題の状況に応じてプロジェクトマネージャーや技術営業に近い役割も積極的に担当してきました。同時に、技術に対する強い情熱と専門性があります。特に機械学習やシミュレーション領域で多くのソフトウェアを開発し、プロジェクトをリードしてきました。
 
-### Job Title, Company
-City, Country · Jan 2022 - Present
-- Shipped X and improved Y by 25% through Z.
-- Led cross-functional work with engineering, design, and product.
-- Reduced latency/cost/errors by applying measurable improvements.
+## 職務経歴
 
-### Previous Role, Company
-City, Country · Jun 2020 - Dec 2021
-- Delivered feature A used by B users.
-- Improved team velocity with tooling and documentation.
+### Computer Vision Engineer, Astroscale Japan
+東京, 2023年9月 - 現在
+- 人工衛星ランデブーミッションにおいてCVシステムのリードを担当。プロジェクトに使用するセンサー・認識アルゴリズム全体の設計から運用までの責任者
+- 人工衛星のエッジ計算機向けの機械学習モデルの開発・検証を担当。実データが得られない条件における、モデル開発・検証・リスク戦略に従事
+- 3次元復元のPoC及びパイプライン開発を担当。軌道上での極めて難易度の高い撮像条件に向けた技術選定や精度評価、パイプライン構築に従事
+- センサーシミュレータ開発を担当。可視カメラ・赤外カメラ・LIdar対応のシミュレータをUnreal Engineで構築。検証や学習データ生成に使用
 
-## Projects
+### Machine Learning Engineer, DeepX Inc.
+東京,  2019年4月 - 2023年4月
+- 機械学習を用いた検品自動化プロダクトをプロジェクトマネージャーとして立ち上げ。最大10人の開発チームをマネジメント。顧客へのヒアリングや要求整理も担当
+- 建設機械の自動化プロジェクトに機械学習エンジニアとして従事。ROS2ベースでセンサードライバや認識アルゴリズムを開発
+- 実データ欠乏領域への機械学習適用の研究開発に従事。3D グラフィックスベースのシミュレータと機械学習モデル開発を担当
 
-### Project Name
-Stack: Tech A, Tech B, Tech C · 2025  
-[Repository](https://github.com/username/project) · [Live demo](https://example.com)
+## スキル
 
-Briefly explain what it does, your role, and the outcome.
+| 分類               | 項目                           | 経験内容                                                     |
+| ------------------ | ------------------------------ | ------------------------------------------------------------ |
+| プログラミング言語 | Python                         | 経験年数: 10年<br />キャリア通じて主に使用                   |
+|                    | C++                            | 経験年数: 4年<br />- Unreal Engineベースのシミュレータ開発<br />- 衛星実機ソフトウェア開発<br />- ROS ノード開発 |
+|                    | GLSL                           | 経験年数: 2年<br />- シミュレータ向けカスタムシェーダ開発    |
+|                    | javascript / typescript        | 経験年数: 2年<br />- Three.jsなどを使用した社内ツール開発    |
+|                    | Fortran                        | 経験年数: 2年<br />- 流体シミュレーション開発                |
+|                    | Shell Script                   | 経験年数: 7年<br />- キャリア通じて多方面に使用              |
+| 知識               | コンピュータビジョン・センサー | 経験年数: 5年<br />- センサー: 可視カメラ・赤外カメラ・Lidar<br />- 用途: 姿勢推定・３次元復元・異常検知・SLAM<br />- ルールベース・学習ベースともに扱える強み |
+|                    | 3D グラフィックス              | 経験年数: 4年<br />- 複数のCV向けシミュレータプロジェクトに従事<br />- センサー: 可視カメラ・赤外カメラ・Lidar<br />- ツール: Blender・Unreal Engine・Unity・Three.js・OpenGL・WebGL・Open3D・MItsuba |
+|                    | 機械学習                       | 経験年数: 7年<br />- キャリア通じて関連プロジェクトに従事。特に実データ欠乏領域に強み<br />- ツール: Pytorch・TensorFlow・ONNX<br /> |
+|                    | ソフトウェア開発プロセス       | git, Docker, CI/CD等, ソフトウェアテスト等                   |
+|                    | ROS, ROS2                      | 経験年数: 2年<br />- センサードライバや認識アルゴリズム開発  |
+|                    | 物理シミュレーション           | Gazebo・Unreal Engine・衛星向けシミュレータ等で開発を経験<br />修士で数値流体力学シミュレータ開発 |
+|                    | 確率・統計                     | データ分析や統計モデリングで使用                             |
+| 一般               | プロジェクトマネジメント       | エンジニア最大10人・年間予算1億円程度の規模の開発プロジェクトをマネジメント |
+|                    | アジャイル開発                 | スクラムマスター・プロダクトオーナー経験<br />スクラムマスター認定資格保有 |
+|                    | 要件定義・仕様策定             |                                                              |
+|                    | 顧客折衝                       |                                                              |
+| 言語               | 日本語                         | ネイティブ                                                   |
+|                    | 英語                           | ビジネスレベル<br />TOEIC: 960                               |
 
-## Skills
-- Languages: ...
-- Frameworks: ...
-- Cloud/Infra: ...
-- Tools: ...
+## 学歴
 
-## Education
-School Name, Degree  
-Graduation Year
+### 航空宇宙工学　修士
 
-## Highlights
-- 2025: Shipped a high-impact feature.
-- 2024: Gave a talk or published an article.
+東京大学 工学系研究科 航空宇宙工学専攻
+
+2017年4月 - 2019年3月
+
+- 燃焼流体の数値流体シミュレータをスクラッチで開発
+- 上記シミュレータを使用した点火過程の研究
+
+### 物理工学 学士
+
+京都大学 工学部 物理工学科
+
+2011年3月 - 2016年9月
+
